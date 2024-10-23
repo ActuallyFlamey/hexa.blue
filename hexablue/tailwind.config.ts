@@ -1,15 +1,11 @@
-/** @type {import("tailwindcss").Config} */
+import type { Config } from "tailwindcss";
 
-module.exports = {
-    purge: {
-        mode: "all",
-        content: [
-            "./src/**/*.rs",
-            "./index.html",
-            "./src/**/*.html",
-            "./src/**/*.css",
-        ],
-    },
+const config: Config = {
+    content: [
+        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+        "./components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    ],
     theme: {
         extend: {
             backgroundImage: ({ theme }) => ({
@@ -35,12 +31,9 @@ module.exports = {
                         ${theme("colors.purple.500")} 100%
                     );
                 `
-            }),
-            fontFamily: {
-                inter: ["Inter"]
-            }
+            })
         }
     },
-    variants: {},
     plugins: [],
 };
+export default config;

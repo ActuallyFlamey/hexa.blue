@@ -11,65 +11,67 @@ export default function Home() {
     if (visualViewport.width >= visualViewport.height) {
         return (
             <>
-                <div>
-                    <div id="nav" className="flex p-[0.5vw] items-center gap-[0.75vw] fixed top-0 bg-darkrainbow w-[100vw] rounded-br-lg rounded-bl-lg border-white  border-b-[0.1vh]">
-                        <Image src={logo} alt="HexaBlue logo" width={0} height={0} style={{width: "3vw", height: "auto"}} />
-                        <h1 className="bg-clip-text text-transparent bg-textrainbow font-black text-[175%] ml-[-0.5%]">
-                            <a href="/">
-                                HexaBlue
-                            </a>
-                        </h1>
-                        <p className="font-semibold">
-                            <a href="/about">
-                                About
-                            </a>
-                        </p>
-                        <p className="font-semibold">
-                            <a href="/projects">
-                                Projects
-                            </a>
-                        </p>
-                        <p className="font-semibold">
-                            <a href="/contact">
-                                Contact
-                            </a>
-                        </p>
-                    </div>
-                    <div className="mt-[20vh] ml-[4vw]">
-                        <div className="flex items-center gap-3">
-                            <h1 className="bg-clip-text text-transparent bg-textrainbow font-black text-[500%]">
+                <div id="nav" className="flex items-center fixed top-0 bg-darkrainbow w-[100vw] p-[0.5vw] gap-[0.75%] text-[125%] font-semibold rounded-b-lg border-b-[0.15vh] border-white z-[99]">
+                    <Image src={logo} alt="HexaBlue logo" width={0} height={0} className="w-[4%] h-auto" />
+                    <h1 className="bg-clip-text text-transparent bg-textrainbow text-[175%] font-black ml-[-0.5vw]">
+                        <a href="/">
+                            HexaBlue
+                        </a>
+                    </h1>
+                    <p>
+                        <a href="/blog">
+                            News
+                        </a>
+                    </p>
+                    <p>
+                        <a href="/projects">
+                            Projects
+                        </a>
+                    </p>
+                    <p>
+                        <a href="/contact">
+                            Contact
+                        </a>
+                    </p>
+                    <p className="text-[75%] absolute right-[1vw]">
+                        Get updates before everyone else: <a href="https://discord.gg/DsARcGwwdM" className="bg-clip-text text-transparent bg-textrainbow">
+                            Join our Discord
+                        </a>!
+                    </p>
+                </div>
+                <div className="flex items-center bg-darkrainbow w-[100vw] h-[75vh] px-[4vw] text-[175%]">
+                    <div className="z-20">
+                        <div className="flex items-center gap-[0.75vw] font-black text-[200%]">
+                            <h1 className="bg-clip-text text-transparent bg-textrainbow">
                                 HexaBlue
                             </h1>
-                            <h1 className="font-black text-[500%]">
+                            <h1>
                                 is
                             </h1>
-                            <h1 id="whatishb" className="bg-clip-text text-transparent bg-textrainbow font-black text-[500%]">
+                            <h1 id="whatishb" className="bg-clip-text text-transparent bg-textrainbow">
                                 the future
                             </h1>
                         </div>
-                        <p className="mt-[-0.5%] text-[150%]">
-                            We are an organization providing quality open-source solutions, striving for a free future.
+                        <p className="text-[75%]">
+                            We are an organization providing quality Free and Open Source solutions,
+                        </p>
+                        <p className="text-[75%]">
+                            striving for a Free and Open Source world.
                         </p>
                     </div>
-                    <Image src={logo} alt="HexaBlue logo" width={0} height={0} style={{width: "40vw", height: "auto"}} className="absolute right-[4vw] mt-[-25vh] z-[-99]" />
+                    <Image src={logo} alt="HexaBlue logo" width={0} height={0} className="w-[30vw] h-auto absolute right-[4vw] z-10" />
                 </div>
-                <div className="bg-zinc-800 mt-[20vh] pt-[16vh] h-[100vh]">
-                    <div className="flex items-center">
-                        <div>
-                            <div className="ml-[4vw] w-[70vw]">
-                                <h1 className="font-bold text-[250%]">
-                                    What we're working on
-                                </h1>
-                                <p>
-                                    Right now, we're building the next generation of social media:
-                                    <b> dibsy</b> is an all-in-one p2p social, meaning content does not go on a server.
-                                </p>
-                                <p>
-                                    Instead, content is shared between online users, granting higher privacy and untrackability.
-                                </p>
-                            </div>
-                        </div>
-                        <Image src={dibsy} alt="dibsy logo" width={0} height={0} style={{width: "15vw", height: "auto"}} className="absolute right-[8vw]" />
+                <div className="flex items-center w-[100vw] h-[40vh] px-[4vw] text-[175%]">
+                    <div className="z-20">
+                        <h1 className="font-bold text-[150%]">
+                            What we're working on
+                        </h1>
+                        <p className="text-[60%]">
+                            We're currently building the future of social media.
+                        </p>
+                        <p className="text-[60%]">
+                            <b>dibsy</b> is a peer-to-peer all-in-one content network. This means content does not go on a server, giving you more privacy.
+                        </p>
                     </div>
                 </div>
             </>

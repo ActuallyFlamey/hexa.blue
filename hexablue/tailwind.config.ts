@@ -33,7 +33,7 @@ const config: Config = {
                 `
             }),
             animation: {
-                fade: "fade 2000ms infinite"
+                fade: "fade 2s infinite"
             },
             keyframes: {
                 fade: {

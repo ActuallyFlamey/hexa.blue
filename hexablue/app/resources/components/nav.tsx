@@ -7,7 +7,7 @@ export default function Navigation() {
 
     if (visualViewport.width >= visualViewport.height) {
         return (
-            <div id="nav" className="flex items-center fixed top-0 bg-darkrainbow w-[100vw] p-[0.5vw] gap-[0.75%] text-[75%] font-semibold rounded-b-lg border-b-[0.15vh] border-white z-[99]">
+            <div id="nav" className="flex items-center fixed top-0 bg-darkrainbow w-[100vw] p-[0.5vw] gap-[0.75vw] text-[75%] font-semibold rounded-b-lg border-b-[0.15vh] border-white z-[99]">
                 <Image src={logo} alt="HexaBlue logo" width={0} height={0} className="w-[4%] h-auto cursor-pointer" onClick={() => {location.href = "/"}} />
                 <h1 className="bg-clip-text text-transparent bg-textrainbow text-[175%] font-black ml-[-0.5vw]">
                     <a href="/">

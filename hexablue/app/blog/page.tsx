@@ -12,6 +12,14 @@ export default function Contact() {
         return (
             <>
                 <Navigation />
+                <div className="grid justify-items-center px-[4vw] pt-[12vh] pb-[3vh]">
+                    <h1 className="font-black text-[150%]">
+                        News
+                    </h1>
+                    <h3 className="font-semibold pt-[2vh]">
+                        No news so far...
+                    </h3>
+                </div>
                 <Footer />
             </>
         )

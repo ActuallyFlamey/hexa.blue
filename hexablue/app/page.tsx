@@ -40,7 +40,6 @@ export default function Home() {
                             </h1>
                             <h1 id="whatishb" className="bg-clip-text text-transparent bg-textrainbow animate-fade" ref={(item) => {
                                 if (!item) {return}
-
                                 whatishb = item
                             }}>
                                 the future

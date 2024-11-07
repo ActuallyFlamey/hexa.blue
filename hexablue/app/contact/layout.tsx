@@ -14,10 +14,8 @@ export const metadata: Metadata = {
 
 export default function ContactLayout({children}: Readonly<{children: React.ReactNode}>) {
     return (
-        <html lang="en">
-            <body className={`${inter.className} bg-zinc-800 text-[175%]`}>
-                {children}
-            </body>
-        </html>
+        <section>
+            {children}
+        </section>
     )
 }

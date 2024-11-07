@@ -1,45 +1,35 @@
 "use client"
 
+import { useEffect } from "react"
+
+import Navigation from "./resources/components/nav"
+import Footer from "./resources/components/footer"
+
 import Image from "next/image"
 
-import logo from "./svg/logo.svg"
-import dibsy from "./svg/dibsy.svg"
+import logo from "./resources/svg/logo.svg"
+import dibsy from "./resources/svg/dibsy.svg"
 
 export default function Home() {
-    if (!visualViewport) {return}
+    if (!window) {return}
 
-    if (visualViewport.width >= visualViewport.height) {
+    const textArray = ["revolutionary", "open", "for you", "the future"]
+
+    let whatishb: HTMLHeadingElement
+
+    useEffect(() => {
+        let i = 0
+        setInterval(() => {
+            whatishb.innerHTML = textArray[i]
+            i = i < 3 ? i + 1 : 0
+        }, 2000)
+    })
+
+    if (window.innerWidth >= window.innerHeight) {
         return (
             <>
-                <div id="nav" className="flex items-center fixed top-0 bg-darkrainbow w-[100vw] p-[0.5vw] gap-[0.75%] text-[125%] font-semibold rounded-b-lg border-b-[0.15vh] border-white z-[99]">
-                    <Image src={logo} alt="HexaBlue logo" width={0} height={0} className="w-[4%] h-auto" />
-                    <h1 className="bg-clip-text text-transparent bg-textrainbow text-[175%] font-black ml-[-0.5vw]">
-                        <a href="/">
-                            HexaBlue
-                        </a>
-                    </h1>
-                    <p>
-                        <a href="/blog">
-                            News
-                        </a>
-                    </p>
-                    <p>
-                        <a href="/projects">
-                            Projects
-                        </a>
-                    </p>
-                    <p>
-                        <a href="/contact">
-                            Contact
-                        </a>
-                    </p>
-                    <p className="text-[75%] absolute right-[1vw]">
-                        Get updates before everyone else: <a href="https://discord.gg/DsARcGwwdM" className="bg-clip-text text-transparent bg-textrainbow">
-                            Join our Discord
-                        </a>!
-                    </p>
-                </div>
-                <div className="flex items-center bg-darkrainbow w-[100vw] h-[75vh] px-[4vw] text-[175%]">
+                <Navigation />
+                <div className="flex items-center bg-darkrainbow w-[100vw] px-[4vw] py-[30vh]">
                     <div className="z-20">
                         <div className="flex items-center gap-[0.75vw] font-black text-[200%]">
                             <h1 className="bg-clip-text text-transparent bg-textrainbow">
@@ -48,7 +38,11 @@ export default function Home() {
                             <h1>
                                 is
                             </h1>
-                            <h1 id="whatishb" className="bg-clip-text text-transparent bg-textrainbow">
+                            <h1 id="whatishb" className="bg-clip-text text-transparent bg-textrainbow animate-fade" ref={(item) => {
+                                if (!item) {return}
+
+                                whatishb = item
+                            }}>
                                 the future
                             </h1>
                         </div>
@@ -59,9 +53,9 @@ export default function Home() {
                             striving for a Free and Open Source world.
                         </p>
                     </div>
-                    <Image src={logo} alt="HexaBlue logo" width={0} height={0} className="w-[30vw] h-auto absolute right-[4vw] z-10" />
+                    <Image src={logo} alt="HexaBlue logo" width={0} height={0} className="w-[30%] h-auto absolute right-[4vw] z-10" />
                 </div>
-                <div className="flex items-center w-[100vw] h-[40vh] px-[4vw] text-[175%]">
+                <div className="flex items-center w-[100vw] px-[4vw] py-[20vh]">
                     <div className="z-20">
                         <h1 className="font-bold text-[150%]">
                             What we're working on
@@ -73,7 +67,9 @@ export default function Home() {
                             <b>dibsy</b> is a peer-to-peer all-in-one content network. This means content does not go on a server, giving you more privacy.
                         </p>
                     </div>
+                    <Image src={dibsy} alt="dibsy logo" width={0} height={0} className="w-[20%] h-auto absolute right-[4vw] -z-10" />
                 </div>
+                <Footer />
             </>
         )
     } else {

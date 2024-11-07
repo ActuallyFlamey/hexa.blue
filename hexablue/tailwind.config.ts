@@ -31,7 +31,16 @@ const config: Config = {
                         ${theme("colors.purple.500")} 100%
                     );
                 `
-            })
+            }),
+            animation: {
+                fade: "fade 2000ms infinite"
+            },
+            keyframes: {
+                fade: {
+                    "0%, 100%": { opacity: "0" },
+                    "25%, 75%": { opacity: "1" }
+                },
+            }
         }
     },
     plugins: [],

@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import { useRouter } from "next/navigation"
 
 import Navigation from "../resources/components/nav"
@@ -10,23 +11,28 @@ import Image from "next/image"
 import dibsy from "../resources/svg/dibsy.svg"
 
 export default function Projects() {
-    if (!window) {return}
-
     const router = useRouter()
 
-    let isLandscape: boolean = window.innerWidth >= window.innerHeight
+    let isLandscape = true
+    let isClient = typeof window !== undefined
 
-    window.addEventListener("resize", () => {
-        let isLandscapeNew = window.innerWidth >= window.innerHeight
+    if (isClient) {
+        useEffect(() => {
+            isLandscape = window.innerWidth >= window.innerHeight
 
-        if (isLandscapeNew != isLandscape) {
-            isLandscape = isLandscapeNew
+            window.addEventListener("resize", () => {
+                let isLandscapeNew = window.innerWidth >= window.innerHeight
 
-            router.refresh()
-        }
-    })
+                if (isLandscapeNew !== isLandscape) {
+                    isLandscape = isLandscapeNew
 
-    return isLandscape ? Landscape() : Portrait()
+                    router.refresh()
+                }
+            })
+        })
+
+        return isLandscape ? Landscape() : Portrait()
+    }
 }
 
 function Landscape() {

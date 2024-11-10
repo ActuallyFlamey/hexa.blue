@@ -12,25 +12,29 @@ import logo from "./resources/svg/logo.svg"
 import dibsy from "./resources/svg/dibsy.svg"
 
 export default function Home() {
-    if (!window) {return}
-
     const router = useRouter()
 
     const textArray = ["revolutionary", "open", "for you", "the future"]
 
-    let isLandscape: boolean = window.innerWidth >= window.innerHeight
+    let toRender = Landscape(textArray)
 
-    window.addEventListener("resize", () => {
-        let isLandscapeNew = window.innerWidth >= window.innerHeight
+    if (typeof window !== undefined) {
+        let isLandscape = window.innerWidth >= window.innerHeight
 
-        if (isLandscapeNew != isLandscape) {
-            isLandscape = isLandscapeNew
+        window.addEventListener("resize", () => {
+            let isLandscapeNew = window.innerWidth >= window.innerHeight
 
-            router.refresh()
-        }
-    })
+            if (isLandscapeNew !== isLandscape) {
+                isLandscape = isLandscapeNew
 
-    return isLandscape ? Landscape(textArray) : Portrait(textArray)
+                router.refresh()
+            }
+        })
+
+        toRender = isLandscape ? Landscape(textArray) : Portrait(textArray)
+    }
+    
+    return toRender
 }
 
 function Landscape(textArray: string[]) {

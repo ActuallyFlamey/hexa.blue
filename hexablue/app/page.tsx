@@ -65,7 +65,7 @@ export default function Home() {
                     <p className="text-[60%]">
                         We're currently building the future of social media.
                     </p>
-                    <p className="text-[60%] xl:max-w-full max-w-[70vw]">
+                    <p className="text-[60%] xl:max-w-full md:max-w-[70vw]">
                         <b>dibsy</b> is a peer-to-peer all-in-one content network. This means content does not go on a server, giving you more privacy.
                     </p>
                 </div>

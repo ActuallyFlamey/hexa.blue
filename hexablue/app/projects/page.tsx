@@ -11,7 +11,7 @@ export default function Projects() {
     return (
         <>
             <Navigation />
-            <div className="grid justify-items-center px-[4vw] md:pt-[12vh] pt-[18vh] pb-[3vh]">
+            <div className="grid justify-items-center px-[4vw] md:pt-[10vh] pt-[20vh] pb-[3vh]">
                 <h1 className="font-black text-[150%]">
                     Our Projects
                 </h1>

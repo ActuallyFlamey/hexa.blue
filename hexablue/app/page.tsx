@@ -16,6 +16,9 @@ export default function Home() {
 
     useEffect(() => {
         let i = 0
+        setTimeout(() => {
+            whatishb.className = whatishb.className + " animate-fade"
+        }, 0)
         setInterval(() => {
             whatishb.innerHTML = textArray[i]
             i = i < (textArray.length - 1) ? i + 1 : 0
@@ -27,7 +30,7 @@ export default function Home() {
             <Navigation />
             <div className="md:flex grid md:items-center justify-items-center md:text-left text-center bg-darkrainbow w-[100vw] px-[4vw] md:py-[30vh] pt-[20vh] pb-[6vh]">
                 <div className="md:z-20">
-                    <div className="md:flex grid md:items-center justify-items-center gap-[0.75vw] font-black md:text-[200%] text-[150%] md:leading-normal leading-none">
+                    <div className="md:flex grid md:items-center justify-items-center gap-[0.75vw] font-black md:text-[200%] text-[150%] md:leading-normal leading-[1.2]">
                         <div className="flex items-center md:gap-[0.75vw] gap-[1.5vw]">
                             <h1 className="bg-clip-text text-transparent bg-textrainbow">
                                 HexaBlue
@@ -36,7 +39,7 @@ export default function Home() {
                                 is
                             </h1>
                         </div>
-                        <h1 id="whatishb" className="bg-clip-text text-transparent bg-textrainbow animate-fade" ref={(item) => {
+                        <h1 id="whatishb" className="bg-clip-text text-transparent bg-textrainbow" ref={(item) => {
                             if (!item) {return}
                             whatishb = item
                         }}>

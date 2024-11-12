@@ -16,7 +16,7 @@ export default function Contact() {
                         <h3 className="font-semibold">
                             Support Email
                         </h3>
-                        <sub className="text-zinc-300 text-[50%]">
+                        <sub className="text-zinc-300 text-center text-[50%]">
                             Currently redirects to Flamey's inbox.
                         </sub>
                     </div>
@@ -61,7 +61,7 @@ export default function Contact() {
                         <h3 className="font-semibold">
                             Twitter
                         </h3>
-                        <sub className="text-zinc-300 text-[50%]">
+                        <sub className="text-zinc-300 text-center text-[50%]">
                             Not &quot;X&quot; until you start calling your daughter Vivian.
                         </sub>
                     </div>

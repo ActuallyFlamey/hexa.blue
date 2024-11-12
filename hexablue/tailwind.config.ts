@@ -40,6 +40,9 @@ const config: Config = {
                     "0%, 100%": { opacity: "0" },
                     "25%, 75%": { opacity: "1" }
                 },
+            },
+            screens: {
+                "md": "809px"
             }
         }
     },

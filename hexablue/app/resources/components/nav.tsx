@@ -30,11 +30,14 @@ export default function Navigation() {
                     </a>
                 </p>
             </div>
-            <p className="text-[75%] md:absolute md:right-[1vw]">
-                Get updates before everyone else: <a href="https://discord.gg/DsARcGwwdM" className="bg-clip-text text-transparent bg-textrainbow">
-                    Join our Discord
-                </a>!
-            </p>
+            <div className="text-[75%] md:flex grid md:items-center justify-items-center md:gap-[0.25vw] md:absolute md:right-[1vw]">
+                <p>
+                    Get updates before everyone else:
+                </p>
+                <a href="https://discord.gg/DsARcGwwdM" className="bg-clip-text text-transparent bg-textrainbow">
+                        Join our Discord!
+                </a>
+            </div>
         </div>
     )
 }

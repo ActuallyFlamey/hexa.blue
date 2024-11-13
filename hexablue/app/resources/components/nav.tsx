@@ -13,7 +13,7 @@ export default function Navigation() {
                     </a>
                 </h1>
             </div>
-            <div className="flex items-center md:gap-[0.5vw] gap-[1vw]">
+            <div className="flex items-center md:gap-[0.5vw] gap-[1.5vw]">
                 <p>
                     <a href="/blog">
                         News

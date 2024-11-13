@@ -12,13 +12,13 @@ export default function Contact() {
                     Contact Us
                 </h1>
                 <div className="grid justify-items-center gap-[2vh] pt-[3vh]">
-                    <div className="grid justify-items-center gap-[1vh]">
+                    <div className="grid justify-items-center gap-[1vh] leading-tight">
                         <h3 className="font-semibold">
                             Support Email
                         </h3>
-                        <sub className="text-zinc-300 text-center text-[50%]">
+                        <p className="text-zinc-300 text-center text-[50%]">
                             Currently redirects to Flamey's inbox.
-                        </sub>
+                        </p>
                     </div>
                     <p className="underline">
                         <a href="mailto:support@hexa.blue">
@@ -57,13 +57,13 @@ export default function Contact() {
                     </p>
                 </div>
                 <div className="grid justify-items-center gap-[2vh] pt-[2vh]">
-                    <div className="grid justify-items-center gap-[1vh]">
+                    <div className="grid justify-items-center gap-[1vh] leading-tight">
                         <h3 className="font-semibold">
                             Twitter
                         </h3>
-                        <sub className="text-zinc-300 text-center text-[50%]">
+                        <p className="text-zinc-300 text-center text-[50%]">
                             Not &quot;X&quot; until you start calling your daughter Vivian.
-                        </sub>
+                        </p>
                     </div>
                     <p className="underline">
                         <a href="https://twitter.com/WeAreHexaBlue">
